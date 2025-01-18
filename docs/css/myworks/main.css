@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+body {
+    position:relative;
+    z-index:1;
+    font-family:Arial, Helvetica, sans-serif;
+    /*font-family:"Racing Sans One", cursive;*/
+    line-height:1.6;
+}
+
+#page {
+    margin:0px auto;
+    width:1200px;
+}
+
+textarea {
+    font-size:16px;
+    padding:1em;
+    width:60em;
+    height:10em;
+}
+
+input, button {
+    cursor:pointer;
+}
+
+#contents {
+    position:relative;
+    z-index:1;
+}
+
+#guitar {
+    position:relative;
+    z-index:2;
+    margin:80px auto;
+    height:429px;
+}
+
+#guitar div img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:4;
+}
+
+canvas {
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:3;
+}
+
+    #overlayers {
+        position:static;
+        top:0px;
+        left:0px;
+        z-index:6;
+        width:1200px;
+        height:100%;
+    }
+
+#string-1th {
+            position:absolute;
+            top:242px;
+            right:214px;
+            z-index:7;
+            background-color:rgba(255, 255, 255, 0.8);
+        }
+
+            #string-1th span {
+                position:absolute;
+                display:inline-block;
+                background-color:rgba(255, 255, 255, 0.5);
+            }
+
+            #string-1th span.f0  {top: -1px; right:-12px; width:10px; height:7px;}
+            #string-1th span.f1  {top: -1px; right: -4px; width:40px; height:7px;}
+            #string-1th span.f2  {top: -1px; right: 38px; width:40px; height:7px;}
+            #string-1th span.f3  {top: -1px; right: 78px; width:38px; height:7px;}
+            #string-1th span.f4  {top:  0px; right:116px; width:36px; height:7px;}
+            #string-1th span.f5  {top:  0px; right:152px; width:34px; height:7px;}
+            #string-1th span.f6  {top:  1px; right:186px; width:32px; height:7px;}
+            #string-1th span.f7  {top:  1px; right:220px; width:30px; height:7px;}
+            #string-1th span.f8  {top:  2px; right:252px; width:28px; height:7px;}
+            #string-1th span.f9  {top:  2px; right:283px; width:26px; height:7px;}
+            #string-1th span.f10 {top:  2px; right:312px; width:26px; height:7px;}
+            #string-1th span.f11 {top:  2px; right:338px; width:25px; height:7px;}
+            #string-1th span.f12 {top:  2px; right:366px; width:25px; height:7px;}
+            #string-1th span.f13 {top:  2px; right:388px; width:23px; height:7px;}
+            #string-1th span.f14 {top:  2px; right:412px; width:22px; height:7px;}
+            #string-1th span.f15 {top:  2px; right:435px; width:20px; height:7px;}
+            #string-1th span.f16 {top:  2px; right:456px; width:18px; height:7px;}
+            #string-1th span.f17 {top:  2px; right:476px; width:16px; height:7px;}
+            #string-1th span.f18 {top:  2px; right:496px; width:16px; height:7px;}
+            #string-1th span.f19 {top:  2px; right:513px; width:16px; height:7px;}
+            #string-1th span.f20 {top:  2px; right:528px; width:16px; height:7px;}
+            #string-1th span.f21 {top:  2px; right:542px; width:16px; height:7px;}
+            #string-1th span.f22 {top:  2px; right:560px; width:16px; height:7px;}
+
+        #string-2th {
+            position:absolute;
+            top:235px;
+            right:214px;
+            z-index:7;
+            background-color:rgba(255, 255, 255, 0.8);
+        }
+
+            #string-2th span {
+                position:absolute;
+                display:inline-block;
+                background-color:rgba(255, 255, 255, 0.5);
+            }
+
+            #string-2th span.f0  {top: -3px; right:-12px; width:10px; height:7px;}
+            #string-2th span.f1  {top: -2px; right: -4px; width:40px; height:7px;}
+            #string-2th span.f2  {top: -3px; right: 38px; width:40px; height:7px;}
+            #string-2th span.f3  {top: -4px; right: 78px; width:38px; height:7px;}
+            #string-2th span.f4  {top: -4px; right:116px; width:36px; height:7px;}
+            #string-2th span.f5  {top: -4px; right:152px; width:34px; height:7px;}
+            #string-2th span.f6  {top: -4px; right:186px; width:32px; height:7px;}
+            #string-2th span.f7  {top: -4px; right:220px; width:30px; height:7px;}
+            #string-2th span.f8  {top: -4px; right:252px; width:28px; height:7px;}
+            #string-2th span.f9  {top: -4px; right:283px; width:26px; height:7px;}
+            #string-2th span.f10 {top: -4px; right:312px; width:26px; height:7px;}
+            #string-2th span.f11 {top: -4px; right:338px; width:25px; height:7px;}
+            #string-2th span.f12 {top: -4px; right:366px; width:25px; height:7px;}
+            #string-2th span.f13 {top: -4px; right:388px; width:23px; height:7px;}
+            #string-2th span.f14 {top: -4px; right:412px; width:22px; height:7px;}
+            #string-2th span.f15 {top: -4px; right:435px; width:20px; height:7px;}
+            #string-2th span.f16 {top: -4px; right:456px; width:18px; height:7px;}
+            #string-2th span.f17 {top: -4px; right:476px; width:16px; height:7px;}
+            #string-2th span.f18 {top: -4px; right:496px; width:16px; height:7px;}
+            #string-2th span.f19 {top: -4px; right:513px; width:16px; height:7px;}
+            #string-2th span.f20 {top: -4px; right:528px; width:16px; height:7px;}
+            #string-2th span.f21 {top: -4px; right:542px; width:16px; height:7px;}
+            #string-2th span.f22 {top: -4px; right:560px; width:16px; height:7px;}
+
+        #string-3th {
+            position:absolute;
+            top:225px;
+            right:214px;
+            z-index:7;
+            background-color:rgba(255, 255, 255, 0.8);
+        }
+
+            #string-3th span {
+                position:absolute;
+                display:inline-block;
+                background-color:rgba(255, 255, 255, 0.5);
+            }
+
+            #string-3th span.f0  {top: -1px; right:-12px; width:10px; height:7px;}
+            #string-3th span.f1  {top: -1px; right: -4px; width:40px; height:7px;}
+            #string-3th span.f2  {top: -2px; right: 38px; width:40px; height:7px;}
+            #string-3th span.f3  {top: -3px; right: 78px; width:38px; height:7px;}
+            #string-3th span.f4  {top: -4px; right:116px; width:36px; height:7px;}
+            #string-3th span.f5  {top: -4px; right:152px; width:34px; height:7px;}
+            #string-3th span.f6  {top: -5px; right:186px; width:32px; height:7px;}
+            #string-3th span.f7  {top: -5px; right:220px; width:30px; height:7px;}
+            #string-3th span.f8  {top: -6px; right:252px; width:28px; height:7px;}
+            #string-3th span.f9  {top: -6px; right:283px; width:26px; height:7px;}
+            #string-3th span.f10 {top: -6px; right:312px; width:26px; height:7px;}
+            #string-3th span.f11 {top: -6px; right:338px; width:25px; height:7px;}
+            #string-3th span.f12 {top: -6px; right:366px; width:25px; height:7px;}
+            #string-3th span.f13 {top: -7px; right:388px; width:23px; height:7px;}
+            #string-3th span.f14 {top: -7px; right:412px; width:22px; height:7px;}
+            #string-3th span.f15 {top: -7px; right:435px; width:20px; height:7px;}
+            #string-3th span.f16 {top: -7px; right:456px; width:18px; height:7px;}
+            #string-3th span.f17 {top: -7px; right:476px; width:16px; height:7px;}
+            #string-3th span.f18 {top: -7px; right:496px; width:16px; height:7px;}
+            #string-3th span.f19 {top: -7px; right:513px; width:16px; height:7px;}
+            #string-3th span.f20 {top: -7px; right:528px; width:16px; height:7px;}
+            #string-3th span.f21 {top: -7px; right:542px; width:16px; height:7px;}
+            #string-3th span.f22 {top: -7px; right:560px; width:16px; height:7px;}
+
+        #string-4th {
+            position:absolute;
+            top:215px;
+            right:214px;
+            z-index:7;
+            background-color:rgba(255, 255, 255, 0.8);
+        }
+
+            #string-4th span {
+                position:absolute;
+                display:inline-block;
+                background-color:rgba(255, 255, 255, 0.5);
+            }
+
+            #string-4th span.f0  {top: -1px; right:-12px; width:10px; height:7px;}
+            #string-4th span.f1  {top: -1px; right: -4px; width:40px; height:7px;}
+            #string-4th span.f2  {top: -2px; right: 38px; width:40px; height:7px;}
+            #string-4th span.f3  {top: -3px; right: 78px; width:38px; height:7px;}
+            #string-4th span.f4  {top: -4px; right:116px; width:36px; height:7px;}
+            #string-4th span.f5  {top: -4px; right:152px; width:34px; height:7px;}
+            #string-4th span.f6  {top: -5px; right:186px; width:32px; height:7px;}
+            #string-4th span.f7  {top: -6px; right:220px; width:30px; height:7px;}
+            #string-4th span.f8  {top: -7px; right:252px; width:28px; height:7px;}
+            #string-4th span.f9  {top: -8px; right:283px; width:26px; height:7px;}
+            #string-4th span.f10 {top: -9px; right:312px; width:26px; height:7px;}
+            #string-4th span.f11 {top: -9px; right:338px; width:25px; height:7px;}
+            #string-4th span.f12 {top: -9px; right:366px; width:25px; height:7px;}
+            #string-4th span.f13 {top: -9px; right:388px; width:23px; height:7px;}
+            #string-4th span.f14 {top: -9px; right:412px; width:22px; height:7px;}
+            #string-4th span.f15 {top: -9px; right:435px; width:20px; height:7px;}
+            #string-4th span.f16 {top: -9px; right:456px; width:18px; height:7px;}
+            #string-4th span.f17 {top: -9px; right:476px; width:16px; height:7px;}
+            #string-4th span.f18 {top: -9px; right:496px; width:16px; height:7px;}
+            #string-4th span.f19 {top: -9px; right:513px; width:16px; height:7px;}
+            #string-4th span.f20 {top: -9px; right:528px; width:16px; height:7px;}
+            #string-4th span.f21 {top: -9px; right:542px; width:16px; height:7px;}
+            #string-4th span.f22 {top: -9px; right:560px; width:16px; height:7px;}
+
+        #string-5th {
+            position:absolute;
+            top:205px;
+            right:214px;
+            z-index:7;
+            background-color:rgba(255, 255, 255, 0.8);
+        }
+
+            #string-5th span {
+                position:absolute;
+                display:inline-block;
+                background-color:rgba(255, 255, 255, 0.5);
+            }
+
+            #string-5th span.f0  {top: -0px; right:-12px; width:10px; height:7px;}
+            #string-5th span.f1  {top: -0px; right: -4px; width:40px; height:7px;}
+            #string-5th span.f2  {top: -1px; right: 38px; width:40px; height:7px;}
+            #string-5th span.f3  {top: -2px; right: 78px; width:38px; height:7px;}
+            #string-5th span.f4  {top: -3px; right:116px; width:36px; height:7px;}
+            #string-5th span.f5  {top: -4px; right:152px; width:34px; height:7px;}
+            #string-5th span.f6  {top: -5px; right:186px; width:32px; height:7px;}
+            #string-5th span.f7  {top: -6px; right:220px; width:30px; height:7px;}
+            #string-5th span.f8  {top: -7px; right:252px; width:28px; height:7px;}
+            #string-5th span.f9  {top: -8px; right:283px; width:26px; height:7px;}
+            #string-5th span.f10 {top: -9px; right:312px; width:26px; height:7px;}
+            #string-5th span.f11 {top:-10px; right:338px; width:25px; height:7px;}
+            #string-5th span.f12 {top:-11px; right:366px; width:25px; height:7px;}
+            #string-5th span.f13 {top:-12px; right:388px; width:23px; height:7px;}
+            #string-5th span.f14 {top:-13px; right:412px; width:22px; height:7px;}
+            #string-5th span.f15 {top:-14px; right:435px; width:20px; height:7px;}
+            #string-5th span.f16 {top:-14px; right:456px; width:18px; height:7px;}
+            #string-5th span.f17 {top:-14px; right:476px; width:16px; height:7px;}
+            #string-5th span.f18 {top:-14px; right:496px; width:16px; height:7px;}
+            #string-5th span.f19 {top:-14px; right:513px; width:16px; height:7px;}
+            #string-5th span.f20 {top:-15px; right:528px; width:16px; height:7px;}
+            #string-5th span.f21 {top:-15px; right:542px; width:16px; height:7px;}
+            #string-5th span.f22 {top:-15px; right:560px; width:16px; height:7px;}
+
+        #string-6th {
+            position:absolute;
+            top:195px;
+            right:214px;
+            z-index:7;
+            background-color:rgba(255, 255, 255, 0.8);
+        }
+
+            #string-6th span {
+                position:absolute;
+                display:inline-block;
+                background-color:rgba(255, 255, 255, 0.5);
+            }
+
+            #string-6th span.f0  {top: -0px; right:-12px; width:10px; height:7px;}
+            #string-6th span.f1  {top: -0px; right: -4px; width:40px; height:7px;}
+            #string-6th span.f2  {top: -1px; right: 38px; width:40px; height:7px;}
+            #string-6th span.f3  {top: -2px; right: 78px; width:38px; height:7px;}
+            #string-6th span.f4  {top: -3px; right:116px; width:36px; height:7px;}
+            #string-6th span.f5  {top: -4px; right:152px; width:34px; height:7px;}
+            #string-6th span.f6  {top: -5px; right:186px; width:32px; height:7px;}
+            #string-6th span.f7  {top: -6px; right:220px; width:30px; height:7px;}
+            #string-6th span.f8  {top: -7px; right:252px; width:28px; height:7px;}
+            #string-6th span.f9  {top: -8px; right:283px; width:26px; height:7px;}
+            #string-6th span.f10 {top: -9px; right:312px; width:26px; height:7px;}
+            #string-6th span.f11 {top:-10px; right:338px; width:25px; height:7px;}
+            #string-6th span.f12 {top:-11px; right:366px; width:25px; height:7px;}
+            #string-6th span.f13 {top:-12px; right:388px; width:23px; height:7px;}
+            #string-6th span.f14 {top:-13px; right:412px; width:22px; height:7px;}
+            #string-6th span.f15 {top:-14px; right:435px; width:20px; height:7px;}
+            #string-6th span.f16 {top:-14px; right:456px; width:18px; height:7px;}
+            #string-6th span.f17 {top:-14px; right:476px; width:16px; height:7px;}
+            #string-6th span.f18 {top:-14px; right:496px; width:16px; height:7px;}
+            #string-6th span.f19 {top:-14px; right:513px; width:16px; height:7px;}
+            #string-6th span.f20 {top:-15px; right:528px; width:16px; height:7px;}
+            #string-6th span.f21 {top:-15px; right:542px; width:16px; height:7px;}
+            #string-6th span.f22 {top:-15px; right:560px; width:16px; height:7px;}
+
+#connect {
+    border:2px solid #CCC;
+    height:225px;
+    background-color:#F8F8F8;
+}
+
+#effectors {
+    margin:100px auto;
+}

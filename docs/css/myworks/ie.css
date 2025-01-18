@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*
+ *
+ * ie.css
+ *
+ *
+ *
+ *
+ *
+ * Copyright 2012@Tomohiro IKEDA
+ *
+ */
+ 
+ 
+ 
+body {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#333333', GradientType = 0);
+}
+
+footer {
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#000000', GradientType = 0);*/
+}

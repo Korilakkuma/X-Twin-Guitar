@@ -1,0 +1,423 @@
+@charset "UTF-8";
+/*
+ *
+ * controllers.css
+ *
+ * 
+ *
+ *
+ *
+ * Copyright 2012@Tomohiro IKEDA
+ *
+ */
+ 
+ 
+ 
+/*Forms for parameters (jQuery UI slider, input[type="number"]*/
+[id*="slider-"] {
+    cursor:pointer;
+    position:relative;
+    margin:10px auto;
+    width:94%;
+}
+
+label {cursor:pointer;}
+
+label[for*="spinner-"],
+label[for="select-filter-type"] {
+    cursor:pointer;
+    display:inline-block;
+    width:60%;
+}
+
+.ui-spinner {
+    cursor:pointer;
+
+    display:inline-block;
+    border:2px solid rgba(255, 255, 255, 0.05);
+    width:35%;
+
+    color:rgba(255, 255, 255, 1.0);
+    text-align:right;
+    text-shadow:-1px -1px 1px rgba(0, 0, 0, 1.0), 1px 1px 1px rgba(255, 255, 255, 0.2);
+
+    background-color:rgba(0, 0, 0, 1.0);
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#666666), to(#000000));
+    background-image:-webkit-linear-gradient(top, #666666, #000000);
+    background-image:   -moz-linear-gradient(top, #666666, #000000);
+    background-image:     -o-linear-gradient(top, #666666, #000000);
+    background-image:        linear-gradient(top, #666666, #000000);
+
+    -webkit-border-radius:0px;
+       -moz-border-radius:0px;
+            border-radius:0px;
+
+    -webkit-box-shadow:5px 5px 3px     rgba(0, 0, 0, 0.8) inset, 3px -3px 3px     rgba(0, 0, 0, 0.5) inset,  /*inner*/
+                       0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset, 0px -1px 1px 2px rgba(0, 0, 0, 0.5);        /*outer (for emboss)*/
+       -moz-box-shadow:5px 5px 3px     rgba(0, 0, 0, 0.8) inset, 3px -3px 3px     rgba(0, 0, 0, 0.5) inset,  /*inner*/
+                       0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset, 0px -1px 1px 2px rgba(0, 0, 0, 0.5);        /*outer (for emboss)*/
+            box-shadow:5px 5px 3px     rgba(0, 0, 0, 0.8) inset, 3px -3px 3px     rgba(0, 0, 0, 0.5) inset,  /*inner*/
+                       0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset, 0px -1px 1px 2px rgba(0, 0, 0, 0.5);        /*outer (for emboss)*/
+}
+
+.ui-spinner-button {
+    -webkit-border-radius:0px;
+       -moz-border-radius:0px;
+            border-radius:0px;
+}
+
+.ui-spinner-input        {margin-left:0.8em;}
+.ui-spinner-input:focus  {outline-color:rgba(128, 0, 128, 1.0);}
+.ui-spinner-input:active {outline-color:rgba(128, 0, 128, 1.0);}
+
+.ui-spinner:focus,
+.ui-spinner:active {
+    outline-color:rgba(128, 0, 128, 1.0) !important;
+
+    background-color:rgba(128, 0, 128, 1.0);
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#cc00cc), to(#800080));
+    background-image:-webkit-linear-gradient(top, #cc00cc, #800080);
+    background-image:   -moz-linear-gradient(top, #cc00cc, #800080);
+    background-image:     -o-linear-gradient(top, #cc00cc, #800080);
+    background-image:        linear-gradient(top, #cc00cc, #800080);
+
+    -webkit-box-shadow:5px  5px 3px     rgba(0, 0, 0, 0.4) inset, 3px -3px 3px     rgba(0, 0, 0, 0.2) inset,  /*inner*/
+                       0px -1px 5px 1px rgba(17, 17, 17, 0.75);    /*outer (for emboss)*/
+       -moz-box-shadow:5px  5px 3px     rgba(0, 0, 0, 0.4) inset, 3px -3px 3px     rgba(0, 0, 0, 0.2) inset,  /*inner*/
+                       0px -1px 5px 1px rgba(17, 17, 17, 0.75);    /*outer (for emboss)*/
+            box-shadow:5px  5px 3px     rgba(0, 0, 0, 0.4) inset, 3px -3px 3px     rgba(0, 0, 0, 0.2) inset,  /*inner*/
+                       0px -1px 5px 1px rgba(17, 17, 17, 0.75);    /*outer (for emboss)*/
+}
+
+    .ui-spinner .ui-icon {cursor:pointer;}
+
+/*Spin button*/
+/*input[type="number"]::-webkit-outer-spin-button {}*/
+/*input[type="number"]::-webkit-inner-spin-button {
+    cursor:pointer;
+
+    -webkit-appearance:none;
+    width:14px;
+    height:18px;
+
+    background-image:url(../../images/illust/png/spinner.png);
+    background-position:left top;
+    background-repeat:no-repeat;
+}*/
+
+/*Checkbox, Radio button (Toggle audio wave, oscillator, and Select wave-type*/
+input[type="checkbox"],
+input[type="radio"] {
+    /*Invisibility for CSS Sprite*/
+    display:none;
+    /*
+    position:absolute;
+    z-index:-1;
+    */
+}
+
+label[for*="checkbox-oscillator-"] span,
+label[for="checkbox-is-filter"]    span {
+    cursor:pointer;
+    display:inline-block;
+    margin-left:12px;
+    width:58px;
+    height:34px;
+    overflow:hidden;
+
+    vertical-align:-0.5em;
+
+    /*CSS Sprite*/
+    background-image:url(../../images/illust/png/checkbox.png);
+    background-position:left top;
+    background-repeat:no-repeat;
+}
+
+label[for*="checkbox-oscillator-"]  span.check-on,
+label[for="checkbox-is-filter"]     span.check-on {
+    background-position:left bottom;
+}
+
+form[name*="form-wave-type"] {margin:10px auto 18px auto;}
+
+    form[name*="form-wave-type"] label[for*="radio-"] {
+        display:block;
+        float:left;
+        height:40px;
+        text-indent:-9999px;
+        overflow:hidden;
+
+        /*CSS Sprite*/
+        background-image:url(../../images/illust/png/wave-type-controllers.png);
+        background-repeat:no-repeat;
+    }
+
+/*CSS Sprite*/
+[for*="radio-sine"]     {width:63px; background-position:   0px bottom;}
+[for*="radio-square"]   {width:55px; background-position: -63px bottom;}
+[for*="radio-saw"]      {width:55px; background-position:-118px bottom;}
+[for*="radio-triangle"] {width:63px; background-position:-173px bottom;}
+
+[for*="radio-sine"]:hover,     [for*="radio-sine"]:focus,     [for*="radio-sine"]:active,     [for*="radio-sine"].active     {background-position:   0px top;}
+[for*="radio-square"]:hover,   [for*="radio-square"]:focus,   [for*="radio-square"]:active,   [for*="radio-square"].active   {background-position: -63px top;}
+[for*="radio-saw"]:hover,      [for*="radio-saw"]:focus,      [for*="radio-saw"]:active,      [for*="radio-saw"].active      {background-position:-118px top;}
+[for*="radio-triangle"]:hover, [for*="radio-triangle"]:focus, [for*="radio-triangle"]:active, [for*="radio-triangle"].active {background-position:-173px top;}
+
+/*Toggle channel (Left channel or Right channel ?)*/
+.selected {
+    display:inline-block;
+    margin-right:5px;
+    margin-bottom:2px;
+    width:50px;
+    height:22px;
+    text-indent:-9999px;
+    overflow:hidden;
+
+    vertical-align:-0.75em;
+
+    /*
+    -webkit-background-clip:padding-box;
+       -moz-background-clip:padding;
+            background-clip:padding-box;
+    */
+
+    /*CSS Sprite*/
+    background-image:url(../../images/illust/png/toggle-channel.png);
+    background-repeat:no-repeat;
+}
+
+[href="#wave-time-all-L"].selected {background-position:left top;}
+[href="#wave-time-all-R"].selected {background-position:left bottom;}
+
+/*Audio controllers*/
+#audio-controllers {}
+
+    #audio-controllers span, #audio-control {display:inline-block;}
+
+    #audio-control {
+        margin-bottom:-14px;
+        /*border:1px solid rgba(255, 255, 255, 0.05);*/
+        width:70px;
+        height:33px;
+        overflow:hidden;
+        text-indent:-9999px;
+
+        /*
+        -webkit-background-clip:padding-box;
+           -moz-background-clip:padding;
+                background-clip:padding-box;
+        */
+
+        /*CSS Sprite*/
+        background-image:url(../../images/illust/png/audio-controllers.png);
+        background-position:0px -70px;
+        background-repeat:no-repeat;
+
+        /*
+        -webkit-box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset;
+           -moz-box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset;
+                box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset;
+        */
+    }
+
+    #audio-control:hover {/*fade out animation*/}
+    #audio-control:focus, #audio-control:active, #audio-control.active {background-position:0px -2px;}
+    #audio-control.active:focus, #audio-control.active:active {background-position:0px -70px;}
+
+/*Record controllers*/
+#record-controllers fieldset dl dd ul {margin:10px auto;}
+
+    #record-controllers fieldset dl dd ul li {
+        display:block;
+        float:left;
+    }
+
+        #record-controllers fieldset dl dd ul li a {
+            display:block;
+            float:left;
+            height:40px;
+            text-indent:-9999px;
+            overflow:hidden;
+
+            /*CSS Sprite*/
+            background-image:url(../../images/illust/png/record-controllers.png);
+            background-repeat:no-repeat;
+        }
+
+/*CSS Sprite*/
+#rec-control  {width:63px; background-position:   0px bottom;}
+#rec-wave     {width:55px; background-position: -63px bottom;}
+#rec-download {width:55px; background-position:-118px bottom;}
+#rec-clear    {width:63px; background-position:-173px bottom;}
+
+#rec-control:hover,  #rec-control:focus,  #rec-control:active, #rec-control.active {background-position:   0px top;}
+#rec-wave:hover,     #rec-wave:focus,     #rec-wave:active                         {background-position: -63px top;}
+#rec-download:hover, #rec-download:focus, #rec-download:active                     {background-position:-118px top;}
+#rec-clear:hover,    #rec-clear:focus,    #rec-clear:active                        {background-position:-173px top;}
+
+/*<audio>*/
+#append-audio {margin-top:12px;}
+
+    #append-audio audio {
+        width:95%;
+        height:auto;
+    }
+
+/*Upload audio file*/
+#file-upload-impulse-response,
+#file-upload-audio,
+#file-upload-mml {
+    display:none;
+}
+
+#text-mask-upload-impulse-response,
+#text-mask-upload-audio,
+#text-mask-upload-mml,
+#text-session-name {
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
+
+    cursor:pointer;
+    margin:10px auto;
+    padding:6px;
+    color:rgba(255, 255, 255, 1.0);
+    font-size:9px;
+
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+
+    /*
+    -webkit-border-radius:4px;
+       -moz-border-radius:4px;
+            border-radius:4px;
+    */
+}
+
+#text-mask-upload-impulse-response {width:97%;}
+#text-mask-upload-audio            {width:67%;}
+#text-mask-upload-mml              {width:100%}
+#text-session-name                 {width:97%;}
+
+#text-session-name,
+.drag-off {
+    border:2px solid rgba(255, 255, 255, 0.05);
+    background-color:rgba(0, 0, 0, 1.0);
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#666666), to(#000000));
+    background-image:-webkit-linear-gradient(top, #666666, #000000);
+    background-image:   -moz-linear-gradient(top, #666666, #000000);
+    background-image:     -o-linear-gradient(top, #666666, #000000);
+    background-image:        linear-gradient(top, #666666, #000000);
+
+    -webkit-box-shadow:0px 0px 7px     rgba(255, 255, 255, 1.0) inset,  /*inner*/
+                       0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset, 0px -1px 1px 2px rgba(0, 0, 0, 0.5);  /*outer (for emboss)*/
+       -moz-box-shadow:0px 0px 7px     rgba(255, 255, 255, 1.0) inset,  /*inner*/
+                       0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset, 0px -1px 1px 2px rgba(0, 0, 0, 0.5);  /*outer (for emboss)*/
+            box-shadow:0px 0px 7px     rgba(255, 255, 255, 1.0) inset,  /*inner*/
+                       0px 0px 0px 2px rgba(0, 0, 0, 1.0) inset, 0px -1px 1px 2px rgba(0, 0, 0, 0.5);  /*outer (for emboss)*/
+}
+
+#text-mask-upload-impulse-response:hover, #text-mask-upload-audio:hover {/*hover animation*/}
+
+#text-mask-upload-impulse-response:focus, #text-mask-upload-impulse-response:active,
+#text-mask-upload-audio:focus,            #text-mask-upload-audio:active,
+#text-mask-upload-mml:focus, #text-mask-upload-mml:active,
+#text-session-name:focus,
+.drag-on {
+    border:2px solid rgba(255, 255, 255, 0.05);
+    background-color:rgba(128, 0, 128, 1.0);
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#cc00cc), to(#800080));
+    background-image:-webkit-linear-gradient(top, #cc00cc, #800080);
+    background-image:   -moz-linear-gradient(top, #cc00cc, #800080);
+    background-image:     -o-linear-gradient(top, #cc00cc, #800080);
+    background-image:        linear-gradient(top, #cc00cc, #800080);
+
+    -webkit-box-shadow:0px  0px 10px     rgba(255, 255, 255, 1.0) inset, 0px 0px 0px 2px rgba(128, 0, 128, 1.0) inset,  /*inner*/
+                       0px -1px 1px 2px rgba(0, 0, 0, 0.5);  /*outer (for emboss)*/
+       -moz-box-shadow:0px  0px 10px     rgba(255, 255, 255, 1.0) inset, 0px 0px 0px 2px rgba(128, 0, 128, 1.0) inset,  /*inner*/
+                       0px -1px 1px 2px rgba(0, 0, 0, 0.5);  /*outer (for emboss)*/
+            box-shadow:0px  0px 10px     rgba(255, 255, 255, 1.0) inset, 0px 0px 0px 2px rgba(128, 0, 128, 1.0) inset,  /*inner*/
+                       0px -1px 1px 2px rgba(0, 0, 0, 0.5);  /*outer (for emboss)*/
+}
+
+#visualization-of-sound > div:last-child dl, #mml-player dl:last-child {}
+
+    #mml-player dl:first-child dd {margin-top:8px;}
+
+    #visualization-of-sound > div:last-child dl,
+    #mml-player dl:last-child dd ul li {
+        display:block;
+        float:right;
+    }
+
+    #visualization-of-sound > div:last-child dl:nth-child(1),
+    #mml-player dl:last-child dd ul li:first-child {
+        margin-top:-2px;
+        margin-left:14px;
+        margin-right:2%;
+    }
+
+    #visualization-of-sound > div:last-child dl:nth-child(2) {
+        margin-top:2px;
+        margin-left:24px;
+    }
+
+    #mml-player dl:last-child dd ul li:first-child {width:160px;}
+
+        #mml-player dl:last-child dd ul li a {
+            display:block;
+            float:left;
+            height:40px;
+            text-indent:-9999px;
+            overflow:hidden;
+
+            /*CSS Sprite*/
+            background-image:url(../../images/illust/png/mml-controllers.png);
+            background-repeat:no-repeat;
+        }
+
+        /*CSS Sprite*/
+        #mml-control, #mml-control.active:focus, #mml-control.active:active {width:63px; background-position:   0px bottom;}
+        #mml-stop     {width:55px; background-position: -63px bottom;}
+        #mml-download {width:63px; background-position:-173px bottom;}
+        #mml-clear    {width:63px; background-position:-173px bottom;}
+
+                             #mml-control:focus,  #mml-control:active, #mml-control.active {background-position:   0px top;}
+                             #mml-stop:focus,     #mml-stop:active                         {background-position: -63px top;}
+        #mml-download:hover, #mml-download:focus, #mml-download:active                     {background-position:-173px top;}
+        #mml-clear:hover,    #mml-clear:focus,    #mml-clear:active                        {background-position:-173px top;}
+
+#notice-mml-is-invalid {margin-left:12px;}
+
+#textarea-mml {
+    resize:none;
+    overflow:auto;
+
+    font-size:14px;
+    color:rgba(255, 255, 255, 1.0);
+
+    -webkit-box-sizing:border-box;
+       -moz-box-sizing:border-box;
+            box-sizing:border-box;
+
+    border:2px solid rgba(255, 255, 255, 0.05);
+    padding:1em;
+    width:98%;
+    height:6em;
+
+    background-color:rgba(0, 0, 0, 1.0);
+
+    -webkit-box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0), 0px -1px 1px 5px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0), 0px -1px 1px 5px rgba(0, 0, 0, 0.5);
+            box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0), 0px -1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#textarea-mml:focus,
+#textarea-mml:active {
+    outline:none;
+
+    -webkit-box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0), 0px -1px 1px 5px rgba(0, 0, 0, 0.5), 0px 0px 18px rgba(255, 255, 255, 0.2) inset;
+       -moz-box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0), 0px -1px 1px 5px rgba(0, 0, 0, 0.5), 0px 0px 18px rgba(255, 255, 255, 0.2) inset;
+            box-shadow:0px 0px 0px 2px rgba(0, 0, 0, 1.0), 0px -1px 1px 5px rgba(0, 0, 0, 0.5), 0px 0px 18px rgba(255, 255, 255, 0.2) inset;
+}

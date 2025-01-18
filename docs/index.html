@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>X Twin Guitar</title>
+    <meta name="application-name" content="X Twin Guitar" />
+    <meta name="description" content="HTML5 Web Audio APIを利用したアプリケーション" />
+    <meta name="keywords" content="HTML5, Web Audio API, JavaScript, X Sound" />
+    <meta name="author" content="池田友洋, Tomohiro IKEDA" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/myworks/reset.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/library/jquery-ui-1.10.3.custom.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/Aristo/Aristo.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/myworks/main.css" type="text/css" media="all" />
+    <script type="text/javascript" src="javascript/library/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="javascript/library/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="javascript/library/jquery.jqdock.min.js"></script>
+    <script type="text/javascript" src="javascript/myworks/EventWrapper.js"></script>
+    <script type="text/javascript" src="javascript/myworks/xsound.min.js"></script>
+    <script type="text/javascript" src="javascript/myworks/controller.js"></script>
+  </head>
+  <body>
+    <div id="page">
+      <header>
+        <h1>X Twin Guitar</h1>
+      </header>
+      <div id="contents">
+        <div id="guitar">
+          <div><canvas id="visualizer"></canvas></div>
+          <div><img src="images/illust/gif/stratocastor.gif" alt="STRATOCASTER" width="1200" height="429" /></div>
+          <div id="overlayers">
+            <div id="string-1th">
+              <span class="f0"></span>
+              <span class="f1"></span>
+              <span class="f2"></span>
+              <span class="f3"></span>
+              <span class="f4"></span>
+              <span class="f5"></span>
+              <span class="f6"></span>
+              <span class="f7"></span>
+              <span class="f8"></span>
+              <span class="f9"></span>
+              <span class="f10"></span>
+              <span class="f11"></span>
+              <span class="f12"></span>
+              <span class="f13"></span>
+              <span class="f14"></span>
+              <span class="f15"></span>
+              <span class="f16"></span>
+              <span class="f17"></span>
+              <span class="f18"></span>
+              <span class="f19"></span>
+              <span class="f20"></span>
+              <span class="f21"></span>
+              <span class="f22"></span>
+            </div>
+            <div id="string-2th">
+              <span class="f0"></span>
+              <span class="f1"></span>
+              <span class="f2"></span>
+              <span class="f3"></span>
+              <span class="f4"></span>
+              <span class="f5"></span>
+              <span class="f6"></span>
+              <span class="f7"></span>
+              <span class="f8"></span>
+              <span class="f9"></span>
+              <span class="f10"></span>
+              <span class="f11"></span>
+              <span class="f12"></span>
+              <span class="f13"></span>
+              <span class="f14"></span>
+              <span class="f15"></span>
+              <span class="f16"></span>
+              <span class="f17"></span>
+              <span class="f18"></span>
+              <span class="f19"></span>
+              <span class="f20"></span>
+              <span class="f21"></span>
+              <span class="f22"></span>
+            </div>
+            <div id="string-3th">
+              <span class="f0"></span>
+              <span class="f1"></span>
+              <span class="f2"></span>
+              <span class="f3"></span>
+              <span class="f4"></span>
+              <span class="f5"></span>
+              <span class="f6"></span>
+              <span class="f7"></span>
+              <span class="f8"></span>
+              <span class="f9"></span>
+              <span class="f10"></span>
+              <span class="f11"></span>
+              <span class="f12"></span>
+              <span class="f13"></span>
+              <span class="f14"></span>
+              <span class="f15"></span>
+              <span class="f16"></span>
+              <span class="f17"></span>
+              <span class="f18"></span>
+              <span class="f19"></span>
+              <span class="f20"></span>
+              <span class="f21"></span>
+              <span class="f22"></span>
+            </div>
+            <div id="string-4th">
+              <span class="f0"></span>
+              <span class="f1"></span>
+              <span class="f2"></span>
+              <span class="f3"></span>
+              <span class="f4"></span>
+              <span class="f5"></span>
+              <span class="f6"></span>
+              <span class="f7"></span>
+              <span class="f8"></span>
+              <span class="f9"></span>
+              <span class="f10"></span>
+              <span class="f11"></span>
+              <span class="f12"></span>
+              <span class="f13"></span>
+              <span class="f14"></span>
+              <span class="f15"></span>
+              <span class="f16"></span>
+              <span class="f17"></span>
+              <span class="f18"></span>
+              <span class="f19"></span>
+              <span class="f20"></span>
+              <span class="f21"></span>
+              <span class="f22"></span>
+            </div>
+            <div id="string-5th">
+              <span class="f0"></span>
+              <span class="f1"></span>
+              <span class="f2"></span>
+              <span class="f3"></span>
+              <span class="f4"></span>
+              <span class="f5"></span>
+              <span class="f6"></span>
+              <span class="f7"></span>
+              <span class="f8"></span>
+              <span class="f9"></span>
+              <span class="f10"></span>
+              <span class="f11"></span>
+              <span class="f12"></span>
+              <span class="f13"></span>
+              <span class="f14"></span>
+              <span class="f15"></span>
+              <span class="f16"></span>
+              <span class="f17"></span>
+              <span class="f18"></span>
+              <span class="f19"></span>
+              <span class="f20"></span>
+              <span class="f21"></span>
+              <span class="f22"></span>
+            </div>
+            <div id="string-6th">
+              <span class="f0"></span>
+              <span class="f1"></span>
+              <span class="f2"></span>
+              <span class="f3"></span>
+              <span class="f4"></span>
+              <span class="f5"></span>
+              <span class="f6"></span>
+              <span class="f7"></span>
+              <span class="f8"></span>
+              <span class="f9"></span>
+              <span class="f10"></span>
+              <span class="f11"></span>
+              <span class="f12"></span>
+              <span class="f13"></span>
+              <span class="f14"></span>
+              <span class="f15"></span>
+              <span class="f16"></span>
+              <span class="f17"></span>
+              <span class="f18"></span>
+              <span class="f19"></span>
+              <span class="f20"></span>
+              <span class="f21"></span>
+              <span class="f22"></span>
+            </div>
+          </div>
+        </div>
+        <div id="forms">
+          <dl>
+            <dt><label for="textarea-gtl">INPUT GTL</label>
+            <dd><textarea id="textarea-gtl"></textarea></dd>
+            <dd><button type="button" id="button-start-gtl">START</button></dd>
+            <dt><label>Master Volume : <span id="output-master-volume">0.25</span></label></dt>
+            <dd><div id="range-master-volume"></div></dd>
+          </dl>
+        </div>
+        <div id="connect">
+          <p>Drop Effector</p>
+        </div>
+        <div><button type="button" id="button-clear-connect">CLEAR</button></div>
+        <div id="effectors">
+          <a href="#wah"><img src="images/illust/png/effector-wah.png" id="wah" alt="Wah" width="125" height="225" /></a>
+          <a href="#tremolo"><img src="images/illust/png/effector-tremolo.png" id="tremolo" alt="Tremolo" width="125" height="225" /></a>
+          <a href="#ringmodulator"><img src="images/illust/png/effector-ringmodulator.png" id="ringmodulator" alt="Ring Modulator" width="125" height="225" /></a>
+          <a href="#phaser"><img src="images/illust/png/effector-phaser.png" id="phaser" alt="Phaser" width="125" height="225" /></a>
+          <a href="#flanger"><img src="images/illust/png/effector-flanger.png" id="flanger" alt="Flanger" width="125" height="225" /></a>
+          <a href="#chorus"><img src="images/illust/png/effector-chorus.png" id="chorus" alt="Chorus" width="125" height="225" /></a>
+          <a href="#delay"><img src="images/illust/png/effector-delay.png" id="delay" alt="Delay" width="125" height="225" /></a>
+        </div>
+      </div>
+      <footer>
+        <div>
+          <small>Copyright &copy; <strong>Tomohiro IKEDA</strong></small>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

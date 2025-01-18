@@ -1,0 +1,270 @@
+@charset "UTF-8";
+/*
+ *
+ * animation.css
+ *
+ * 
+ *
+ *
+ *
+ * Copyright 2012@Tomohiro IKEDA
+ *
+ */
+ 
+ 
+ 
+.hover,
+footer ul li a,
+.select2-container .select2-choice {
+    /*hover animation*/
+    -webkit-transition:opacity 0.4s ease !important;
+       -moz-transition:opacity 0.4s ease !important;
+         -o-transition:opacity 0.4s ease !important;
+            transition:opacity 0.4s ease !important;
+}
+
+.hover:hover,
+footer ul li a:hover,
+footer ul li a:focus,
+footer ul li a:active,
+.select2-container .select2-choice:hover,
+.select2-drop.select2-drop-above,
+.select2-container-active .select2-choice,
+.select2-container-active .select2-choices {
+    opacity:0.6 !important;
+}
+
+
+
+/*Opening animation*/
+@-webkit-keyframes fade-in-animation {
+      0% {opacity:0}
+    100% {opacity:1}
+}
+
+@-moz-keyframes fade-in-animation {
+      0% {opacity:0}
+    100% {opacity:1}
+}
+
+@-o-keyframes fade-in-animation {
+      0% {opacity:0}
+    100% {opacity:1}
+}
+
+@keyframes fade-in-animation {
+      0% {opacity:0}
+    100% {opacity:1}
+}
+
+
+
+/*Intro string animation*/
+/*
+#intro-line-2 {
+    display:block;
+
+    -webkit-animation:line-2-animation 5s ease-out 1 normal 0s;
+       -moz-animation:line-2-animation 5s ease-out 1 normal 0s;
+         -o-animation:line-2-animation 5s ease-out 1 normal 0s;
+            animation:line-2-animation 5s ease-out 1 normal 0s;
+}
+
+@-webkit-keyframes line-2-animation {
+      0% {-webkit-transform:translateX(5000px);}
+    100% {-webkit-transform:translateX(   0px);}
+}
+
+@-moz-keyframes line-2-animation {
+      0% {-moz-transform:translateX(5000px);}
+    100% {-moz-transform:translateX(   0px);}
+}
+
+@-o-keyframes line-2-animation {
+      0% {-o-transform:translateX(5000px);}
+    100% {-o-transform:translateX(   0px);}
+}
+
+@keyframes line-2-animation {
+      0% {transform:translateX(5000px);}
+    100% {transform:translateX(   0px);}
+}
+
+#intro-line-3 {
+    display:block;
+
+    -webkit-animation:line-3-animation 10s ease-out 1 normal 0s;
+       -moz-animation:line-3-animation 10s ease-out 1 normal 0s;
+         -o-animation:line-3-animation 10s ease-out 1 normal 0s;
+            animation:line-3-animation 10s ease-out 1 normal 0s;
+}
+
+@-webkit-keyframes line-3-animation {
+      0% {-webkit-transform:translateX(-10000px);}
+    100% {-webkit-transform:translateX(    0px);}
+}
+
+@-moz-keyframes line-3-animation {
+      0% {-moz-transform:translateX(-10000px);}
+    100% {-moz-transform:translateX(     0px);}
+}
+
+@-o-keyframes line-3-animation {
+      0% {-o-transform:translateX(-10000px);}
+    100% {-o-transform:translateX(     0px);}
+}
+
+@keyframes line-3-animation {
+      0% {transform:translateX(-10000px);}
+    100% {transform:translateX(     0px);}
+}
+*/
+
+
+
+.line-out-left {
+    -webkit-animation:line-out-left-animation 3s linear 1 normal 0s;
+       -moz-animation:line-out-left-animation 3s linear 1 normal 0s;
+         -o-animation:line-out-left-animation 3s linear 1 normal 0s;
+            animation:line-out-left-animation 3s linear 1 normal 0s;
+}
+
+@-webkit-keyframes line-out-left-animation {
+      0% {-webkit-transform:translateX(    0px);}
+    100% {-webkit-transform:translateX(-2000px);}
+}
+
+@-moz-keyframes line-out-left-animation {
+      0% {-moz-transform:translateX(    0px);}
+    100% {-moz-transform:translateX(-2000px);}
+}
+
+@-o-keyframes line-out-left-animation {
+      0% {-o-transform:translateX(    0px);}
+    100% {-o-transform:translateX(-2000px);}
+}
+
+@keyframes line-out-left-animation {
+      0% {transform:translateX(    0px);}
+    100% {transform:translateX(-2000px);}
+}
+
+
+
+.line-out-right {
+    -webkit-animation:line-out-right-animation 3s linear 1 normal 0s;
+       -moz-animation:line-out-right-animation 3s linear 1 normal 0s;
+         -o-animation:line-out-right-animation 3s linear 1 normal 0s;
+            animation:line-out-right-animation 3s linear 1 normal 0s;
+}
+
+@-webkit-keyframes line-out-right-animation {
+      0% {-webkit-transform:translateX(   0px);}
+    100% {-webkit-transform:translateX(2000px);}
+}
+
+@-moz-keyframes line-out-right-animation {
+      0% {-moz-transform:translateX(   0px);}
+    100% {-moz-transform:translateX(2000px);}
+}
+
+@-o-keyframes line-out-right-animation {
+      0% {-o-transform:translateX(   0px);}
+    100% {-o-transform:translateX(2000px);}
+}
+
+@keyframes line-out-right-animation {
+      0% {transform:translateX(   0px);}
+    100% {transform:translateX(2000px);}
+}
+
+
+
+/*Start button*/
+@-webkit-keyframes shining-animation {
+      0% {-webkit-box-shadow:0px 0px  3px rgba(255, 255, 255, 1.0);}
+    100% {-webkit-box-shadow:0px 0px 30px rgba(255, 255, 255, 1.0);}
+}
+
+@-moz-keyframes shining-animation {
+      0% {-moz-box-shadow:0px 0px  3px rgba(255, 255, 255, 1.0);}
+    100% {-moz-box-shadow:0px 0px 30px rgba(255, 255, 255, 1.0);}
+}
+
+@-o-keyframes shining-animation {
+      0% {box-shadow:0px 0px  3px rgba(255, 255, 255, 1.0);}
+    100% {box-shadow:0px 0px 30px rgba(255, 255, 255, 1.0);}
+}
+
+@keyframes shining-animation {
+      0% {box-shadow:0px 0px  3px rgba(255, 255, 255, 1.0);}
+    100% {box-shadow:0px 0px 30px rgba(255, 255, 255, 1.0);}
+}
+
+
+
+/*Progress bar*/
+#progress-wrap {
+    position:relative;
+    z-index:1;
+
+    margin:24px auto;
+    border:2px solid rgba(0, 0, 0, 1.0);
+    /*width:80%;*/
+    width:204px;
+    height:12px;
+
+    background-color:rgba(255, 255, 255, 0.05);
+
+    -webkit-box-shadow:0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+       -moz-box-shadow:0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+            box-shadow:0px -1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+#progress-bar {
+    position:absolute;
+    z-index:2;
+
+    margin-top:0px !important;  /*Clear*/
+    /*width:100%;*/
+    width:204px;
+    height:12px;
+
+    background-color:rgba(128, 0, 128, 1.0);
+    background-image:url(../../images/illust/gif/progress-bar.gif);
+    background-position:left top;
+    background-repeat:no-repeat;
+
+    /*
+    background-image:-webkit-gradient(linear, left top, left bottom, from(#800080), to(#cc00cc));
+    background-image:-webkit-linear-gradient(top, #800080, #cc00cc);
+    background-image:   -moz-linear-gradient(top, #800080, #cc00cc);
+    background-image:     -o-linear-gradient(top, #800080, #cc00cc);
+    background-image:        linear-gradient(top, #800080, #cc00cc);
+
+    -webkit-animation:progress-animation 5s ease-in-out infinite normal 0s;
+       -moz-animation:progress-animation 5s ease-in-out infinite normal 0s;
+         -o-animation:progress-animation 5s ease-in-out infinite normal 0s;
+            animation:progress-animation 5s ease-in-out infinite normal 0s;
+    */
+}
+
+@-webkit-keyframes progress-animation {
+      0% {width:  0%;}
+    100% {width:100%;}
+}
+
+@-moz-keyframes progress-animation {
+      0% {width:  0%;}
+    100% {width:100%;}
+}
+
+@-o-keyframes progress-animation {
+      0% {width:  0%;}
+    100% {width:100%;}
+}
+
+@keyframes progress-animation {
+      0% {width:  0%;}
+    100% {width:100%;}
+}

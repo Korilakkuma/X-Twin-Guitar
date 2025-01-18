@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/*
+ *
+ * piano.css
+ *
+ * 
+ *
+ *
+ *
+ * Copyright 2012@Tomohiro IKEDA
+ *
+ */
+ 
+ 
+ 
+#piano {
+    position:relative;
+    z-index:1;
+
+    margin:30px auto;
+    width:1256px;
+    height:240px;
+
+    background-image:url(../../images/illust/png/piano-frame-fiber.png);
+    background-position:left top;
+    background-repeat:no-repeat;
+
+    /*emboss*/
+    /*
+    -webkit-box-shadow:0px 0px 0px 3px rgba(0, 0, 0, 1.0) inset, 0px -1px 5px 9px rgba(17, 17, 17, 0.4);
+       -moz-box-shadow:0px 0px 0px 3px rgba(0, 0, 0, 1.0) inset, 0px -1px 5px 9px rgba(17, 17, 17, 0.4);
+            box-shadow:0px 0px 0px 3px rgba(0, 0, 0, 1.0) inset, 0px -1px 5px 9px rgba(17, 17, 17, 0.4);
+    */
+}
+
+#master-volume-controllers,
+#glide-controllers {
+    position:absolute;
+    top:13px;
+    z-index:2;
+    width:230px;
+}
+
+#master-volume-controllers {left:30px;}
+#glide-controllers         {left:250px;}
+
+#slider-master-volume,
+#slider-glide {
+    margin:10px 0px;
+    width:195px;
+    height:5px;
+}
+
+    #piano .ui-spinner {width:35%;}
+    #piano label[for*="spinner-"] {width:50%;}
+
+#instrument-mode-controllers,
+#visualization-controllers,
+#mml-controllers,
+#session-controllers {
+    position:absolute;
+    top:9px;
+    z-index:2;
+
+    font-size:12px;
+    color:rgba(255, 255, 255, 1.0);
+    text-shadow:-1px -1px 1px rgba(0, 0, 0, 1.0), 1px 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+#instrument-mode-controllers {left:480px;}
+#visualization-controllers   {left:600px;}
+#mml-controllers             {left:760px;}
+#session-controllers         {left:870px;}
+
+label[for="checkbox-is-instrument-mode"] span,
+label[for="checkbox-is-visualization"]   span,
+label[for="checkbox-is-mml"]             span,
+label[for="checkbox-is-session"]         span {
+    cursor:pointer;
+    display:inline-block;
+    margin-left:12px;
+    width:58px;
+    height:34px;
+    overflow:hidden;
+
+    vertical-align:-1em;
+
+    /*CSS Sprite*/
+    background-image:url(../../images/illust/png/checkbox.png);
+    background-position:left top;
+    background-repeat:no-repeat;
+}
+
+
+label[for="checkbox-is-instrument-mode"] span.check-on,
+label[for="checkbox-is-visualization"]   span.check-on,
+label[for="checkbox-is-mml"]             span.check-on,
+label[for="checkbox-is-session"]         span.check-on {
+    background-position:left bottom;
+}
+
+
+/*Reference | Size of piano keyboard (black)*/
+/*width : height -> 23 : 150*/
+#white {
+    position:absolute;
+    top:73px;
+    left:30px;
+}
+
+    #white li {
+        -webkit-box-sizing:border-box;
+           -moz-box-sizing:border-box;
+                box-sizing:border-box;
+
+        cursor:pointer;
+        display:block;
+        float:left;
+        width:23px;
+        height:150px;
+    }
+
+/*Reference | Size of piano keyboard (black)*/
+/*width : height -> 11 : 95*/
+#black {
+    position:absolute;
+    top:73px;
+    left:35px;
+
+    height:95px;  /*Enable to click keyboard*/
+}
+
+    #black li {
+        -webkit-box-sizing:border-box;
+           -moz-box-sizing:border-box;
+                box-sizing:border-box;
+
+        cursor:pointer;
+        display:block;
+        float:left;
+        margin-left:12px;
+        width:11px;
+        height:95px;
+    }
+
+    #white .key-off {
+        background-image:url(../../images/illust/png/piano-keyboard-white.png);
+        background-repeat:no-repeat;
+        background-position:left bottom;
+    }
+
+    #white .key-on {
+        background-image:url(../../images/illust/png/piano-keyboard-white.png);
+        background-repeat:no-repeat;
+        background-position:left top;
+    }
+
+    #black .key-off {
+        background-image:url(../../images/illust/png/piano-keyboard-black.png);
+        background-repeat:no-repeat;
+        background-position:left bottom;
+    }
+
+    #black .key-on {
+        background-image:url(../../images/illust/png/piano-keyboard-black.png);
+        background-repeat:no-repeat;
+        background-position:left top;
+    }
+
+.skip {
+    display:block;
+    float:left;
+    margin-left:24px;
+    width:10px;
+    height:190px;
+    visibility:hidden;
+}
